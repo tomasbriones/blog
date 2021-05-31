@@ -1,18 +1,20 @@
 
-<%@posts.each do |p|%>
-  <div class="card my-4" style="max-width: 540px;">
-    <div class="row no-gutters">
-      <div class="col-md-4">
-        <img src="<%= p.title%>" alt="imagen" class="card-img pt-4 pl-1">
-        
-      </div>
-      <div class="col-md-8">
-        <div class="card-body">
-          <h5 class="card-title"><%= p.title%></h5>
-          <p class="card-text"><%= p.comment%></p>
-          <p class="card-text"><small class="text-muted"><%= p.created_at.to_time.strftime('%B %e at %l:%M %p')%></small></p>
+<div class="mt-5 pt-3">
+  <%@posts.each do |p|%>
+    <div class="card my-4" style="max-width: 540px;">
+      <div class="row no-gutters">
+        <div class="col-md-4">
+          <img src="<%= p.url%>" alt="imagen" class="card-img pt-4 pl-1">
+
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title"><%= p.title%></h5>
+            <p class="card-text"><%= p.comment%></p>
+            <p class="card-text"><small class="text-muted"><%= p.created_at.to_time.strftime('%B %e at %l:%M %p')%></small></p>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-<%end%>
+  <%end%>
+</div>
