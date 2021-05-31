@@ -1,5 +1,12 @@
 <%= form_with(model: @post, url: posts_create_path,local: true) do |f|%>
-    <%=f.label:title%>
-    <%=f.text_field :title%>
+    <div>
+        <%=f.label:title%>
+        <%=f.text_field :title, placeholder: 'Título del post'%>
+    </div>
+    
+    <div>
+        <%=f.label:Contenido%>
+        <%=f.text_field :content, placeholder: 'Agregue contenido'%>
+    </div>
     <%=f.submit%>
 <%end%>
